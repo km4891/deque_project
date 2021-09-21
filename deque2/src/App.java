@@ -21,8 +21,10 @@ public class App {
         // q.enqueue(11);
         // //q.dequeue();
         // q.enqueue(45);
-        System.out.println(dq.peek());
-        dq.display();
+        System.out.println(dq.peekFront());
+        System.out.println(dq.peekRear());
+
+        // dq.display();
     }
     
 }

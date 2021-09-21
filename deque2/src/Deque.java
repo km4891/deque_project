@@ -96,9 +96,17 @@ public class Deque {
         }
         
     }
-    public int peek(){
+    public int peekFront(){
         if(!isEmpty()){
             return arr[front];
+        }
+        else
+            return -1;
+    }
+
+    public int peekRear(){
+        if(!isEmpty()){
+            return arr[rear];
         }
         else
             return -1;
