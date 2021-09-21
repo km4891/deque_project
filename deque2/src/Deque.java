@@ -1,3 +1,5 @@
+
+
 public class Deque {
 
     private
@@ -16,7 +18,10 @@ public class Deque {
     }
 
     public boolean isEmpty() {
-        return front == -1;
+        
+        return (front == -1);
+        
+       
     }
 
     public boolean isFull() {
@@ -77,11 +82,7 @@ public class Deque {
             arr[rear] = value ;
 
     }
-    public void display(){
-        for(int i = 0 ; i < nItems ; i++){
-            System.out.println(arr[i] + " ");
-        }
-    }
+    
     public int dequeue(){
         if(!isEmpty()){
             int temp = arr[front];
@@ -110,5 +111,12 @@ public class Deque {
         }
         else
             return -1;
+    }
+
+    public void display(){
+        // int [] arr = Deque.toArray();
+        for(int i = 0 ; i < nItems ; i++){
+            System.out.println("hi" + arr[i] + " ");
+        }
     }
 }

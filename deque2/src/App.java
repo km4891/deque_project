@@ -8,11 +8,14 @@ public class App {
     public static void main(String[] args)  {
         Deque dq = new Deque(5);
 
-        // dq.insertLeft(11);
+        dq.insertLeft(11);
         dq.insertLeft(7);
         dq.insertRight(41);
         dq.insertLeft(71);
-        dq.insertRight(11);
+        // dq.insertRight(11);
+        // dq.insertRight(2);
+        // dq.insertRight(3);
+        // dq.insertRight(5);
 
         // q.enqueue(12);
         // q.enqueue(13);
@@ -24,7 +27,7 @@ public class App {
         System.out.println(dq.peekFront());
         System.out.println(dq.peekRear());
 
-        // dq.display();
+        
     }
     
 }
