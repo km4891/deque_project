@@ -17,9 +17,11 @@ public class Deque {
         nItems = 0;
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty() throws DequeException {
         
         return (front == -1);
+        
+        
         
        
     }
@@ -38,8 +40,10 @@ public class Deque {
         // If queue is initially empty
         if (front == -1)
         {
+            
             front = 0;
             rear = 0;
+            
         }
          
         // front is at first position of queue
@@ -98,11 +102,11 @@ public class Deque {
         
     }
     public int peekFront(){
-        if(!isEmpty()){
-            return arr[front];
+        if(isEmpty()){
+            throw new DequeException("Empty");
         }
         else
-            return -1;
+            return arr[front];
     }
 
     public int peekRear(){
