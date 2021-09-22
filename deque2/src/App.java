@@ -13,8 +13,8 @@ public class App {
         dq.insertRight(41);
         dq.insertLeft(71);
         dq.insertRight(13);
-        // dq.insertRight(2);
-        // dq.insertRight(3);
+        dq.insertRight(2);
+        dq.insertRight(3);
         // dq.insertRight(5);
 
         // q.enqueue(12);

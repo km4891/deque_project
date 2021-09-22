@@ -32,8 +32,7 @@ public class Deque {
     public void insertLeft(int value) throws DequeException{
         if (isFull())
         {
-            System.out.println("Overflow");
-            return;
+            throw new DequeException("Queue is Full");
         }
   
         // If queue is initially empty
@@ -60,8 +59,7 @@ public class Deque {
         
             if (isFull())
             {
-                System.out.println(" Overflow ");
-                return;
+                throw new DequeException("Queue is Full");
             }
       
             // If queue is initially empty
