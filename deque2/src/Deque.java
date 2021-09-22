@@ -83,7 +83,7 @@ public class Deque {
 
     }
     
-    public int dequeue(){
+    public int removeLeft(){
         if(!isEmpty()){
             int temp = arr[front];
             front++;
