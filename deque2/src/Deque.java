@@ -103,19 +103,18 @@ public class Deque {
     }
     public int peekFront(){
         if(isEmpty()){
-            throw new DequeException("Empty");
+            throw new DequeException("Deque is Empty");
         }
         else
             return arr[front];
     }
 
     public int peekRear(){
-        if(!isEmpty()){
-            return arr[rear];
+        if(isEmpty()){
+            throw new DequeException("Deque is Empty");
         }
         else
-            return -1;
-    }
+         return arr[rear];    }
 
     public void display(){
         // int [] arr = Deque.toArray();
