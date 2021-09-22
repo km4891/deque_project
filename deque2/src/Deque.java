@@ -52,6 +52,7 @@ public class Deque {
   
         // insert current element into Deque
         arr[front] = value ;
+        nItems++;
 
     }
 
@@ -80,6 +81,7 @@ public class Deque {
              
             // insert current element into Deque
             arr[rear] = value ;
+            nItems++;
 
     }
     
@@ -116,7 +118,7 @@ public class Deque {
     public void display(){
         // int [] arr = Deque.toArray();
         for(int i = 0 ; i < nItems ; i++){
-            System.out.println("hi" + arr[i] + " ");
+            System.out.println( arr[i] + " ");
         }
     }
 }
