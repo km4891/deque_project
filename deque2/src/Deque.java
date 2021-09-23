@@ -1,5 +1,3 @@
-
-
 public class Deque {
 
     private
@@ -19,16 +17,11 @@ public class Deque {
 
     public boolean isEmpty() throws DequeException {
         
-        return (front == -1);
-        
-        
-        
-       
+        return (front == -1);       
     }
 
     public boolean isFull() {
-        return ((front == 0 && rear == size-1)||
-            front == rear+1);
+        return (nItems == size);
     }
 
     public void insertLeft(int value) throws DequeException{
@@ -54,7 +47,7 @@ public class Deque {
             front = front-1;
   
         // insert current element into Deque
-        arr[front] = value ;
+        arr[front] = value;
         nItems++;
 
     }
@@ -101,6 +94,21 @@ public class Deque {
         }
         
     }
+
+    public int removeRight(){
+        if(!isEmpty()){
+            int temp = arr[rear];
+            rear--;
+            if(rear < 0)
+                rear = size - 1;
+            nItems--;
+            return temp;
+        }
+        else{
+            throw new DequeException("Deque is Empty");
+        }
+        
+    }
     public int peekFront(){
         if(isEmpty()){
             throw new DequeException("Deque is Empty");
@@ -117,7 +125,6 @@ public class Deque {
          return arr[rear];    }
 
     public void display(){
-        // int [] arr = Deque.toArray();
         if(isEmpty()){
             throw new DequeException("Deque is Empty");
         }
