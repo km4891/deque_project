@@ -8,14 +8,15 @@ public class App {
     public static void main(String[] args)  {
         Deque dq = new Deque(5);
 
-        // dq.insertLeft(11);
-        // dq.insertLeft(7);
-        // dq.insertRight(41);
+        dq.insertLeft(11);
+        dq.insertLeft(7);
+        dq.insertRight(41);
         // dq.insertLeft(71);
         // dq.insertRight(13);
         // dq.insertRight(2);
         // dq.insertRight(3);
         // dq.insertRight(5);
+        dq.removeLeft();
 
         // q.enqueue(12);
         // q.enqueue(13);
