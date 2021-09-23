@@ -34,7 +34,7 @@ public class Deque {
     public void insertLeft(int value) throws DequeException{
         if (isFull())
         {
-            throw new DequeException("Queue is Full");
+            throw new DequeException("Deque is Full");
         }
   
         // If queue is initially empty
@@ -63,7 +63,7 @@ public class Deque {
         
             if (isFull())
             {
-                throw new DequeException("Queue is Full");
+                throw new DequeException("Deque is Full");
             }
       
             // If queue is initially empty
@@ -97,7 +97,7 @@ public class Deque {
             return temp;
         }
         else{
-            return -1;
+            throw new DequeException("Deque is Empty");
         }
         
     }
@@ -118,8 +118,13 @@ public class Deque {
 
     public void display(){
         // int [] arr = Deque.toArray();
+        if(isEmpty()){
+            throw new DequeException("Deque is Empty");
+        }
+        else
         for(int i = 0 ; i < nItems ; i++){
             System.out.println( arr[i] + " ");
+
         }
     }
 }
